@@ -96,6 +96,20 @@
   .q-old { font-size: 10px; color: rgba(255,255,255,0.2); text-decoration: line-through; }
   .q-badge { background: rgba(245,200,0,0.14); color: var(--am); font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 4px; }
 
+  /* HORÁRIOS */
+  .sch-block { border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; overflow: hidden; }
+  .sch-head { background: #0D0D0D; padding: 0.75rem 1.25rem; display: flex; align-items: center; gap: 12px; }
+  .sch-dot { width: 9px; height: 9px; border-radius: 50%; background: #F5C800; flex-shrink: 0; }
+  .sch-nome { font-size: 13px; font-weight: 600; color: #F5C800; letter-spacing: 1px; text-transform: uppercase; }
+  .sch-dias { font-size: 12px; color: rgba(255,255,255,0.35); margin-left: auto; }
+  .sch-rows { background: #1e1e1e; }
+  .sch-turno { font-size: 10px; font-weight: 600; letter-spacing: 2px; color: rgba(255,255,255,0.25); text-transform: uppercase; padding: 0.6rem 1.25rem 0.3rem; border-top: 1px solid rgba(255,255,255,0.05); }
+  .sch-row { display: flex; align-items: center; padding: 0.5rem 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.04); gap: 1rem; }
+  .sch-row:last-child { border-bottom: none; }
+  .sch-pill { background: #F5C800; color: #0D0D0D; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px; flex-shrink: 0; min-width: 60px; text-align: center; font-family: monospace; }
+  .sch-nivel { font-size: 13px; color: rgba(255,255,255,0.5); }
+  .sch-tag { font-size: 11px; color: rgba(255,255,255,0.3); margin-left: auto; background: rgba(255,255,255,0.06); padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+
   /* SÁBADO */
   .sabado { background: #1c1900; border-top: 1px solid rgba(245,200,0,0.15); border-bottom: 1px solid rgba(245,200,0,0.15); padding: 2rem 3rem; }
   .sabado-titulo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--am); letter-spacing: 1px; margin-bottom: 0.4rem; }
@@ -367,6 +381,81 @@
   <div class="sabado-titulo">Aulas aos Sábados</div>
   <p class="sabado-txt">Funcionamento com horários e modalidades específicas. Cobrança adicional de <strong>R$ 20,00 por aula</strong> aplicável independentemente do plano contratado, <strong>exceto para assinantes do La Praia Pass</strong>.</p>
 </div>
+
+<!-- HORÁRIOS -->
+<section class="sec-alt" style="padding: 5rem 3rem;">
+  <div class="sec-header">
+    <div><div class="sec-num">05</div><div class="sec-nome">Horários das <em>Aulas</em></div></div>
+    <p class="sec-desc">Confira os dias e horários disponíveis para cada modalidade.</p>
+  </div>
+
+  <div style="display:flex; flex-direction:column; gap:1.25rem;">
+
+    <div class="sch-block">
+      <div class="sch-head"><div class="sch-dot"></div><span class="sch-nome">Futcross</span><span class="sch-dias">Seg · Qua · Sex</span></div>
+      <div class="sch-rows">
+        <div class="sch-row"><span class="sch-pill">06:30</span><span class="sch-nivel">Turma única</span></div>
+      </div>
+    </div>
+
+    <div class="sch-block">
+      <div class="sch-head"><div class="sch-dot"></div><span class="sch-nome">Funcional</span></div>
+      <div class="sch-rows">
+        <div class="sch-row"><span class="sch-pill">08:00</span><span class="sch-nivel">Turma única</span><span class="sch-tag">Seg a Sex</span></div>
+        <div class="sch-row"><span class="sch-pill">18:30</span><span class="sch-nivel">Turma única</span><span class="sch-tag">Seg a Sex</span></div>
+        <div class="sch-row"><span class="sch-pill">19:30</span><span class="sch-nivel">Turma única</span><span class="sch-tag">Seg e Qua</span></div>
+      </div>
+    </div>
+
+    <div class="sch-block">
+      <div class="sch-head"><div class="sch-dot"></div><span class="sch-nome">Funcional Kids</span><span class="sch-dias">Seg · Qua · Sex</span></div>
+      <div class="sch-rows">
+        <div class="sch-row"><span class="sch-pill">17:30</span><span class="sch-nivel">Turma única</span></div>
+      </div>
+    </div>
+
+    <div class="sch-block">
+      <div class="sch-head"><div class="sch-dot"></div><span class="sch-nome">Futevôlei</span></div>
+      <div class="sch-rows">
+        <div class="sch-turno">Manhã — Seg a Sex</div>
+        <div class="sch-row"><span class="sch-pill">06:30</span><span class="sch-nivel">Iniciante B / A</span></div>
+        <div class="sch-row"><span class="sch-pill">07:30</span><span class="sch-nivel">Iniciante A+ / Intermediário</span></div>
+        <div class="sch-turno">Noite — Segunda</div>
+        <div class="sch-row"><span class="sch-pill">18:00</span><span class="sch-nivel">Iniciante B</span></div>
+        <div class="sch-row"><span class="sch-pill">19:00</span><span class="sch-nivel">Iniciante A</span></div>
+        <div class="sch-row"><span class="sch-pill">20:00</span><span class="sch-nivel">Iniciante A+</span></div>
+        <div class="sch-row"><span class="sch-pill">21:00</span><span class="sch-nivel">Intermediário</span></div>
+        <div class="sch-turno">Noite — Terça e Quinta</div>
+        <div class="sch-row"><span class="sch-pill">18:00</span><span class="sch-nivel">Iniciante B</span></div>
+        <div class="sch-row"><span class="sch-pill">19:00</span><span class="sch-nivel">Iniciante A</span></div>
+        <div class="sch-row"><span class="sch-pill">20:00</span><span class="sch-nivel">Feminino A / A+ / Intermediário</span></div>
+        <div class="sch-row"><span class="sch-pill">21:00</span><span class="sch-nivel">Iniciante A+ / Intermediário</span></div>
+        <div class="sch-turno">Noite — Quarta e Sexta</div>
+        <div class="sch-row"><span class="sch-pill">18:00</span><span class="sch-nivel">Iniciante B</span></div>
+        <div class="sch-row"><span class="sch-pill">19:00</span><span class="sch-nivel">Iniciante A / A+</span></div>
+        <div class="sch-row"><span class="sch-pill">20:20</span><span class="sch-nivel">Intermediário</span></div>
+      </div>
+    </div>
+
+    <div class="sch-block">
+      <div class="sch-head"><div class="sch-dot"></div><span class="sch-nome">Vôlei de Praia</span></div>
+      <div class="sch-rows">
+        <div class="sch-row"><span class="sch-pill">16:00</span><span class="sch-nivel">Turma única</span><span class="sch-tag">Seg · Qua · Sex</span></div>
+        <div class="sch-row"><span class="sch-pill">17:00</span><span class="sch-nivel">Turma única</span><span class="sch-tag">Seg a Sex</span></div>
+      </div>
+    </div>
+
+    <div class="sch-block">
+      <div class="sch-head" style="background:#1c1900;"><div class="sch-dot" style="background:#fff;opacity:0.3;"></div><span class="sch-nome" style="color:rgba(255,255,255,0.6);">Sábado</span><span style="font-size:11px;font-weight:600;color:#B8960A;background:rgba(245,200,0,0.12);padding:2px 10px;border-radius:999px;margin-left:auto;">+ R$ 20 por aula</span></div>
+      <div class="sch-rows">
+        <div class="sch-row"><span class="sch-pill">07:00</span><span class="sch-nivel">Iniciante B / A</span></div>
+        <div class="sch-row"><span class="sch-pill">08:00</span><span class="sch-nivel">Iniciante A+ / Intermediário</span></div>
+        <div class="sch-row"><span class="sch-pill">09:00</span><span class="sch-nivel">Feminino A+ / Intermediário</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
